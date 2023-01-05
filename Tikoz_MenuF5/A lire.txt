@@ -1,0 +1,12 @@
+Pour ajouté des véhicules dans votre base de donnés :
+
+INSERT INTO `tikoz_adminvehicule` (`name`, `label`, `category`) VALUES
+('BMW M5', 'bmci', 'imports'), 
+('Audi RS3', 'rs318', 'imports')
+;
+
+BMW M5 = Le nom que vous voulez pour le véhicule
+bmci = le nom pour faire spawn le véhicule (ex : /car ...)
+imports = choissisez dans quel categorie vous voulez mettre le véhicule. Il y a : muscle , compacts , vans , sedans , suvs , sportsclassics , offroad , coupes  , sports , super , motorcycles	
+
+Vous pouvez ajouté ou supprimé autant de véhicule que vous voulez, pas besoin de restart le script					  
