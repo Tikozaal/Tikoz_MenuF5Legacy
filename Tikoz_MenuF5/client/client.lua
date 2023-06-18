@@ -1,9 +1,6 @@
-ESX = nil
+ESX = exports["es_extended"]:getSharedObject()
 
 local Tikozaal = {}
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-
 local PlayerData = {}
 
 RegisterNetEvent('esx:playerLoaded')
@@ -18,19 +15,6 @@ AddEventHandler('esx:setJob', function(job)
 end)
 
 Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(10)
-    end
-    while ESX.GetPlayerData().job == nil do
-		Citizen.Wait(10)
-    end
-    if ESX.IsPlayerLoaded() then
-
-		ESX.PlayerData = ESX.GetPlayerData()
-
-    end
-
     ESX.PlayerData = ESX.GetPlayerData()
     WeaponData = ESX.GetWeaponList()
 
